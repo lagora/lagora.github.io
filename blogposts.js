@@ -6,7 +6,7 @@ $('#articles').ready(function(){
 
 	$(formats).each(function(i,extension){
 		$.ajax({
-		  url: current_date+extension,
+		  url: 'articles/'+current_date+extension,
 		  context: document.body
 		}).success(function(datas) {
 		  console.log("success", datas);
