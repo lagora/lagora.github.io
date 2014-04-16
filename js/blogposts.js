@@ -1,4 +1,4 @@
-$('body').append('<ul id="articles"><li></li></ul>');
+$('body>div').append('<ul id="articles" class="list-unstyled"><li></li></ul>');
 $('#articles').ready(function(){
 	moment().local();
 	var formats = ['.json','.txt','.md','.html'];
@@ -9,7 +9,6 @@ $('#articles').ready(function(){
 		  url: 'articles/'+current_date+extension,
 		  context: document.body
 		}).success(function(datas) {
-		  console.log("success", datas);
 		  $('#articles li:last-child').append('<li>'+current_date+'<br/>'+datas+'</li>');
 		});
 	});
