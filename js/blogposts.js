@@ -3,7 +3,6 @@ function load_article (y, m, d, target)
 	m = -1 == (''+m).indexOf('0') ? '0'+m:m;
 
 	var date = y+'_'+m+'_'+d;
-	console.log(date);
 	var formats = ['.html'];
 	var loaded = false;
 
@@ -12,10 +11,10 @@ function load_article (y, m, d, target)
 		  url: 'articles/'+date+extension,
 		  context: document.body
 		}).fail(function (datas) {
-			var line = '<li><small>'+y+'/'+m+'/'+d+' : no article</small></li>';
-			$('#loading_log').append(line);
+			// var line = '<li><small>'+y+'/'+m+'/'+d+' : no article</small></li>';
+			// $('#loading_log').append(line);
 			var diff = Math.abs($('body').data('month') - $('body').data('until-month'));
-			console.log('diff', diff);
+			// console.log('diff', diff);
 			if (3 > diff) {
 				load_archives();
 			}
