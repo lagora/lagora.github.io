@@ -20,7 +20,8 @@ function load_article (y, m, d, target)
 			if (1 == d) {
 				$('body').data('until-month', m-1);
 			}
-			$(target).append('<li class="blog article" date="'+date+'">'+y+'/'+m+'/'+d+'<br/>'+datas+'</li>');
+			$(target).append('<li date="'+date+'">'+y+'/'+m+'/'+d+'</li>');
+			$(target).append('<li class="blog article" date="'+date+'">'+datas+'</li>');
 			$('body').data('loaded', $('body').data('loaded')+1);
 			loaded = true;
 		});
