@@ -20,7 +20,7 @@ function load_article (y, m, d, target)
 			if (1 == d) {
 				$('body').data('until-month', m-1);
 			}
-			$(target.parent()).append('<li class="blog article" date="'+date+'">'+y+'/'+m+'/'+d+'<br/>'+datas+'</li>');
+			$(target).append('<li class="blog article" date="'+date+'">'+y+'/'+m+'/'+d+'<br/>'+datas+'</li>');
 			$('body').data('loaded', $('body').data('loaded')+1);
 			loaded = true;
 		});
@@ -33,7 +33,7 @@ function load_archives () {
 	var m = $('body').data('month');
 	var d = $('body').data('day');
 
-	load_article(y, m, d, $('#articles li.blog:last-child'));
+	load_article(y, m, d, $('#articles'));
 
 	d = 1 == d ? 31:((d-1) < 10 ? '0'+(d-1):(d-1));
 	m = 0 < m && 1 == d ? m-1:m;
