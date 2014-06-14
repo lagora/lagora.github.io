@@ -11,18 +11,16 @@ function load_article (y, m, d, target)
 		  url: 'articles/'+date+extension,
 		  context: document.body
 		}).fail(function (datas) {
-			// var line = '<li><small>'+y+'/'+m+'/'+d+' : no article</small></li>';
-			// $('#loading_log').append(line);
 			var diff = Math.abs($('body').data('month') - $('body').data('until-month'));
-			// console.log('diff', diff);
 			if (3 > diff) {
 				load_archives();
 			}
 		}).success(function (datas) {
+			console.log(date+', loaded');
 			if (1 == d) {
 				$('body').data('until-month', m-1);
 			}
-			$(target).append('<li class="blog article">'+y+'/'+m+'/'+d+'<br/>'+datas+'</li>');
+			$(target).append('<li class="blog article" date="'+date+'">'+y+'/'+m+'/'+d+'<br/>'+datas+'</li>');
 			$('body').data('loaded', $('body').data('loaded')+1);
 			loaded = true;
 		});
@@ -35,7 +33,7 @@ function load_archives () {
 	var m = $('body').data('month');
 	var d = $('body').data('day');
 
-	load_article(y, m, d, $('#articles li:last-child'));
+	load_article(y, m, d, $('#articles li.blog:last-child'));
 
 	d = 1 == d ? 31:((d-1) < 10 ? '0'+(d-1):(d-1));
 	m = 0 < m && 1 == d ? m-1:m;
@@ -47,7 +45,7 @@ function load_archives () {
 
 $('body').ready(function () {
 	$('body').data('loaded', 0);
-	$('body .content').append('<ul id="articles" class="list-unstyled"><li data-date="'+moment().format('YYYY_MM_DD')+'"></li></ul>');
+	$('body .content').append('<ul id="articles" class="list-unstyled"><li class="blog" data-date="'+moment().format('YYYY_MM_DD')+'"></li></ul>');
 	moment().local();
 	$('body').data('year', moment().format('YYYY'));
 	$('body').data('month', moment().format('MM'));
