@@ -1,7 +1,7 @@
 function load_article(y, m, d, limit, target)
 {
 	var date = y+'_'+m+'_'+d;
-	var formats = ['.md','.html'];
+	var formats = ['.html'];
 	var loaded = false;
 
 	$(formats).each(function(i,extension){
