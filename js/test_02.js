@@ -74,9 +74,11 @@ $(document).ready(function () {
 		
 		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
-		}/* else if ('game' === item.type) {
-			clonedTemplate = clonedTemplate.replace('{{name}}', item.project);
-		}*/
+		} else if ('game' === item.type) {
+			clonedTemplate = clonedTemplate
+			.replace('{{name}}', item.project)
+			.replace('{{url}}', '{{project}}');
+		}
 		console.log(clonedTemplate);
 		
 		Object.keys(item).forEach(function (itemKey, index2) {
