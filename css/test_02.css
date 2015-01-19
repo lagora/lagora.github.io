@@ -41,6 +41,9 @@ body .container .menu .item {
   min-height: 64px;
   max-width: 64px;
 }
+body .container .menu .item p {
+  margin: auto;
+}
 body .container .main {
   color: #333333;
   background-color: #ffffff;
