@@ -74,6 +74,8 @@ $(document).ready(function () {
 		
 		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
+		} else if ('game' === item.type) {
+			clonedTemplate = clonedTemplate.replace('{{name}}', item.name.substring(item.name.indexOf('_')++));
 		}
 		console.log(clonedTemplate);
 		
