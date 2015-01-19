@@ -37,7 +37,7 @@ var items = [
 	{
 		type: 'social',
 		name: 'mail',
-		icon: 'fa fa-enveloppe',
+		icon: 'fa fa-envelope',
 		url: 'mailto:lagora@sonofapix.com',
 		text: null
 	},
@@ -68,9 +68,7 @@ $(document).ready(function () {
 	console.log(items);
 	var itemTemplate = '<a class="item" href="{{url}}" target="_blank"><p><i class="{{icon}} fa-3x"></i>{{name}}</p></a>';
 	items.forEach(function (item, index) {
-		console.log('\n');
 		var clonedTemplate = itemTemplate;
-		//clonedTemplate = clonedTemplate.replace('{{url}}', item.url);
 		
 		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
@@ -79,7 +77,6 @@ $(document).ready(function () {
 			.replace('{{name}}', item.project)
 			.replace('{{url}}', '{{project}}');
 		}
-		console.log(clonedTemplate);
 		
 		Object.keys(item).forEach(function (itemKey, index2) {
 			console.log(itemKey, item[itemKey]);
@@ -88,7 +85,6 @@ $(document).ready(function () {
 			} else {
 				clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', '');
 			}
-			console.log(clonedTemplate);
 		});
 		
 		$(clonedTemplate).insertBefore('.menu.item div:last-child');
