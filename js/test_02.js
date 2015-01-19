@@ -72,9 +72,9 @@ $(document).ready(function () {
 		var clonedTemplate = itemTemplate;
 		//clonedTemplate = clonedTemplate.replace('{{url}}', item.url);
 		
-		/*if ('social' === item.type) {
+		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
-		} else if ('game' === item.type) {
+		}/* else if ('game' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', item.project);
 		}*/
 		console.log(clonedTemplate);
