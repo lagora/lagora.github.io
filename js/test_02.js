@@ -70,9 +70,7 @@ $(document).ready(function () {
 	items.forEach(function (item, index) {
 		var clonedTemplate = itemTemplate;
 		clonedTemplate = clonedTemplate.replace('&nbsp;', '&nbsp;'+item.name);
-		console.log(clonedTemplate);
-		//$('.menu.item').insertAfter(clonedTemplate);
+		$(clonedTemplate).insertAfter('.menu.item');
 		//console.log(index, item);
-		//console.log(item.name);
 	});
 });
