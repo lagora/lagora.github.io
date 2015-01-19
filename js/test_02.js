@@ -64,8 +64,7 @@ var items = [
 			demo: false
 		}
 	];
-
-(function () {
+$(document).ready(function () {
 	console.log(items);
 	
 	items.forEach(function (item, index) {
@@ -73,5 +72,4 @@ var items = [
 		console.log(item.name);
 		$('.menu.item').insertAfter('<div class="item"><a href="">'+item.name+'</a></div>')
 	});
-	
-})();
+});
