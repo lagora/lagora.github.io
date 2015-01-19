@@ -1,0 +1,53 @@
+.hidden {
+  visibility: hidden;
+}
+body {
+  margin: 0;
+  background-color: #333333;
+  /* 	overflow: hidden; */
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+body .logo {
+  background-image: url('http://sonofapix.org/img/soap.logo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 80px;
+  margin: auto;
+}
+body .container {
+  margin: auto;
+}
+body .container .item {
+  display: inline-block;
+  float: left;
+}
+body .container .menu {
+  width: 20%;
+  min-height: 360px;
+  max-height: 360px;
+}
+body .container .menu .item {
+  color: #333333;
+  text-decoration: none;
+  background-color: #ffffff;
+  display: inline-flex;
+  width: 28%;
+  height: 28%;
+  border-radius: 8px;
+  text-align: center;
+  margin: 8px;
+  min-height: 64px;
+  max-width: 64px;
+}
+body .container .main {
+  color: #333333;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 49%;
+  height: 360px;
+}
+body .container .main .content {
+  margin: 8px;
+}
