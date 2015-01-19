@@ -35,7 +35,6 @@ body .container .menu .item {
   display: inline-flex;
   width: 28%;
   height: 28%;
-  border-radius: 8px;
   text-align: center;
   margin: 8px;
   min-height: 64px;
@@ -53,7 +52,6 @@ body .container .menu .item[href="http://lagora.itch.io"] {
 body .container .main {
   color: #333333;
   background-color: #ffffff;
-  border-radius: 8px;
   width: 49%;
   height: 360px;
 }
