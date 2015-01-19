@@ -75,8 +75,8 @@ $(document).ready(function () {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
 		}
 		
-		Object.keys(item).forEach(function (itemValue, itemkey) {
-			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}');
+		Object.keys(item).forEach(function (itemValue, itemKey) {
+			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', itemValue);
 		});
 		
 		$(clonedTemplate).insertAfter('.menu.item div:last-child');
