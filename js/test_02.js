@@ -70,6 +70,5 @@ $(document).ready(function () {
 	items.forEach(function (item, index) {
 		console.log(index, item);
 		console.log(item.name);
-		$('.menu.item').insertAfter('<div class="item"><a href="">'+item.name+'</a></div>')
 	});
 });
