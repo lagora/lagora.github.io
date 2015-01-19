@@ -66,7 +66,7 @@ var items = [
 ];
 $(document).ready(function () {
 	console.log(items);
-	var itemTemplate = '<a href="{{url}}" target="_blank"><div class="item"><i class="{{icon}} fa-3x"></i>{{name}}</div></a>';
+	var itemTemplate = '<a class="item" href="{{url}}" target="_blank"><i class="{{icon}} fa-3x"></i>{{name}}</a>';
 	items.forEach(function (item, index) {
 		console.log('\n');
 		var clonedTemplate = itemTemplate;
