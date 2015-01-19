@@ -43,6 +43,7 @@ body .container .menu .item {
 }
 body .container .menu .item p {
   margin: auto;
+  display: flex;
 }
 body .container .main {
   color: #333333;
