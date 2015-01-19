@@ -66,8 +66,11 @@ var items = [
 	];
 $(document).ready(function () {
 	console.log(items);
-	
+	var itemTemplate = '<div class="item"><a target="_blank"><i class="fa fa-3x"></i>&nbsp;</a></div>';
 	items.forEach(function (item, index) {
+		var clonedTemplate = itemTemplate;
+		clonedTemplate = clonedTemplate.replace('&nbsp;', '&nbsp;'+item.name);
+		$('.menu.item').insertAfter(clonedTemplate);
 		console.log(index, item);
 		console.log(item.name);
 	});
