@@ -85,7 +85,7 @@ $(document).ready(function () {
 			console.log(clonedTemplate);
 		});
 		
-		$(clonedTemplate).insertAfter('.menu.item div:last-child');
+		$(clonedTemplate).insertAfter('.menu.item *:last-child');
 		console.log(index, item);
 	});
 });
