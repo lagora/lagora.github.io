@@ -43,7 +43,7 @@ var items = [
 	},
 	{
 		type: 'game',
-		name: "project_d",
+		project: "d",
 		title: "dulcis hypnagogia",
 		tagline: "It Was Just A Murder Case.\nThe First Time I Would Have Met Him.\nIt Was My First Job As A Private Mind.",
 		status: "frozen",
@@ -51,14 +51,14 @@ var items = [
 	},
 	{
 		type: 'game',
-		name: "project_t", 
+		project: "t", 
 		title: "the bodyguard",
 		status: "wip",
 		demo: false
 	},
 	{
 		type: 'game',
-		name: "project_rp", 
+		project: "rp", 
 		title: "robot psy",
 		status: "current",
 		demo: false
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
 		} else if ('game' === item.type) {
-			clonedTemplate = clonedTemplate.replace('{{name}}', item.name.substring(item.name.indexOf('_')++));
+			clonedTemplate = clonedTemplate.replace('{{name}}', item.project);
 		}
 		console.log(clonedTemplate);
 		
