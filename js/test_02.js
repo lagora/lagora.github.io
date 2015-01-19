@@ -68,6 +68,7 @@ $(document).ready(function () {
 	console.log(items);
 	var itemTemplate = '<div class="item"><a href="{{url}}" target="_blank"><i class="{{icon}} fa-3x"></i>&nbsp;{{name}}</a></div>';
 	items.forEach(function (item, index) {
+		console.log('\n');
 		var clonedTemplate = itemTemplate;
 		//clonedTemplate = clonedTemplate.replace('{{url}}', item.url);
 		
@@ -76,9 +77,9 @@ $(document).ready(function () {
 		}
 		console.log(clonedTemplate);
 		
-		Object.keys(item).forEach(function (itemValue, itemKey) {
-			console.log(itemValue, itemKey);
-			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', itemValue);
+		Object.keys(item).forEach(function (itemKey, index2) {
+			console.log(itemKey, item[itemKey]);
+			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', item[itemKey]);
 			console.log(clonedTemplate);
 		});
 		
