@@ -45,6 +45,10 @@ body .container .menu .item p {
   margin: auto;
   display: flex;
 }
+body .container .menu .item.itch.io {
+  background-image: url('http://itch.io/static/images/home2/logo.png');
+  background-color: #333;
+}
 body .container .main {
   color: #333333;
   background-color: #ffffff;
