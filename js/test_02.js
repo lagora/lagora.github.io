@@ -74,9 +74,12 @@ $(document).ready(function () {
 		if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
 		}
+		console.log(clonedTemplate);
 		
 		Object.keys(item).forEach(function (itemValue, itemKey) {
+			console.log(itemValue, itemKey);
 			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', itemValue);
+			console.log(clonedTemplate);
 		});
 		
 		$(clonedTemplate).insertAfter('.menu.item div:last-child');
