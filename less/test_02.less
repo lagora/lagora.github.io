@@ -1,0 +1,77 @@
+@item-sqrt-size: 64px;
+@item-sqrt-size-on: 128px;
+@item-sqrt-size-hover: @item-sqrt-size-on * 2 + 16px;
+
+@dark: #333;
+@bg_color: @dark;
+@item_bg_color: contrast(@bg_color);
+@item_color: @dark;
+
+.hidden {
+	visibility: hidden;
+}
+
+body {
+	margin: 0;
+	background-color: @bg_color;
+/* 	overflow: hidden; */
+	font-family: sans-serif;
+	font-size: 1rem;
+
+	.logo {
+		background-image: url('http://sonofapix.org/img/soap.logo.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 160px;
+		height: 80px;
+		margin: auto;
+	}
+	
+	.container {
+		margin: auto;
+		
+		.item {
+			display: inline-block;
+			float: left;
+		}
+
+		.menu {
+			width: 20%;
+			min-height: 360px;
+			max-height: 360px;
+
+			.item {
+				color: #f8f8f8;
+				background-color: @item_bg_color;
+				display: inline-flex;
+				color: #ccc;
+				width: 28%;
+				height: 28%;
+				border-radius: 8px;
+				text-align: center;
+				margin: 8px;
+				min-height: @item-sqrt-size;
+				max-width: @item-sqrt-size;
+
+				a {
+					text-align: center;
+					margin: auto;
+					color: @dark;
+				}
+			}
+		}
+		
+		.main {
+			color: @dark;
+			background-color: contrast(@dark);
+			border-radius: 8px;
+			width: 49%;
+			height: 360px;
+			
+			.content {
+				margin: 8px;	
+			}
+		}
+		
+	}
+}
