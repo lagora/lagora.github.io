@@ -41,7 +41,8 @@ body {
 			max-height: 360px;
 
 			.item {
-				color: #f8f8f8;
+				color: @dark;
+				text-decoration: none;
 				background-color: @item_bg_color;
 				display: inline-flex;
 				color: #ccc;
@@ -49,16 +50,9 @@ body {
 				height: 28%;
 				border-radius: 8px;
 				text-align: center;
-				margin: 8px;
+				margin: auto;
 				min-height: @item-sqrt-size;
 				max-width: @item-sqrt-size;
-
-				a {
-					text-align: center;
-					text-decoration: none;
-					margin: auto;
-					color: @dark;
-				}
 			}
 		}
 		
