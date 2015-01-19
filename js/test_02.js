@@ -66,10 +66,19 @@ var items = [
 ];
 $(document).ready(function () {
 	console.log(items);
-	var itemTemplate = '<div class="item"><a href target="_blank"><i class="fa fa-3x"></i>&nbsp;</a></div>';
+	var itemTemplate = '<div class="item"><a href="{{url}}" target="_blank"><i class="{{icon}} fa-3x"></i>&nbsp;{{name}}</a></div>';
 	items.forEach(function (item, index) {
 		var clonedTemplate = itemTemplate;
-		clonedTemplate = clonedTemplate.replace('&nbsp;', '&nbsp;'+item.name).replace('href', 'href="'+item.url+'"');
+		//clonedTemplate = clonedTemplate.replace('{{url}}', item.url);
+		
+		if ('social' === item.type) {
+			clonedTemplate = clonedTemplate.replace('{{name}}', '');
+		}
+		
+		Object.keys(item).forEach(function (itemValue, itemkey) {
+			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}');
+		});
+		
 		$(clonedTemplate).insertAfter('.menu.item div:last-child');
 		console.log(index, item);
 	});
