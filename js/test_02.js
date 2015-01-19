@@ -72,20 +72,24 @@ $(document).ready(function () {
 		var clonedTemplate = itemTemplate;
 		//clonedTemplate = clonedTemplate.replace('{{url}}', item.url);
 		
-		if ('social' === item.type) {
+		/*if ('social' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', '');
 		} else if ('game' === item.type) {
 			clonedTemplate = clonedTemplate.replace('{{name}}', item.project);
-		}
+		}*/
 		console.log(clonedTemplate);
 		
 		Object.keys(item).forEach(function (itemKey, index2) {
 			console.log(itemKey, item[itemKey]);
-			clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', item[itemKey]);
+			if (-1 !== clonedTemplate.indexOf) {
+				clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', item[itemKey]);
+			} else {
+				clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', '');
+			}
 			console.log(clonedTemplate);
 		});
 		
-		$(clonedTemplate).insertAfter('.menu.item *:last-child');
+		$(clonedTemplate).insertBefore('.menu.item div:last-child');
 		console.log(index, item);
 	});
 });
