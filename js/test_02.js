@@ -66,11 +66,11 @@ var items = [
 ];
 $(document).ready(function () {
 	console.log(items);
-	var itemTemplate = '<div class="item"><a target="_blank"><i class="fa fa-3x"></i>&nbsp;</a></div>';
+	var itemTemplate = '<div class="item"><a href target="_blank"><i class="fa fa-3x"></i>&nbsp;</a></div>';
 	items.forEach(function (item, index) {
 		var clonedTemplate = itemTemplate;
-		clonedTemplate = clonedTemplate.replace('&nbsp;', '&nbsp;'+item.name);
-		$(clonedTemplate).insertAfter('.menu.item');
-		//console.log(index, item);
+		clonedTemplate = clonedTemplate.replace('&nbsp;', '&nbsp;'+item.name).replace('href', 'href="'+item.url+'"');
+		$(clonedTemplate).insertAfter('.menu.item div:last-child');
+		console.log(index, item);
 	});
 });
