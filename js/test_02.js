@@ -99,6 +99,7 @@ $(document).ready(function () {
 			url,
 			function (data) {
 				console.log(data);
+				$('.content').html(data);
 			}
 		);
 	});
