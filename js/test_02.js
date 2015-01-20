@@ -79,7 +79,6 @@ $(document).ready(function () {
 		}
 		
 		Object.keys(item).forEach(function (itemKey, index2) {
-			console.log(itemKey, item[itemKey]);
 			if (-1 !== clonedTemplate.indexOf) {
 				clonedTemplate = clonedTemplate.replace('{{' + itemKey + '}}', item[itemKey]);
 			} else {
@@ -88,6 +87,5 @@ $(document).ready(function () {
 		});
 		
 		$(clonedTemplate).insertBefore('.menu.item div:last-child');
-		console.log(index, item);
 	});
 });
