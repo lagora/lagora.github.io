@@ -95,11 +95,11 @@ $(document).ready(function () {
 		var target = e.currentTarget;
 		var url = window.location.protocol+'//'+window.location.hostname+'/project_'+$(target).attr('href')+'.md';
 		console.log(target, url);
-		$.get({
-			url: url, 
-			success: function (data) {
+		$.get(
+			url,
+			function (data) {
 				console.log(data);
 			}
-		});
+		);
 	});
 });
