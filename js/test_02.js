@@ -94,7 +94,7 @@ $(document).ready(function () {
 		var target = e.currentTarget;
 		var url = $(e).attr('url');
 		$.get({
-			url, 
+			url: url, 
 			success: function (data) {
 				console.log(data);
 			}
