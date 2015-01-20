@@ -65,7 +65,6 @@ var items = [
 	}
 ];
 $(document).ready(function () {
-	console.log(items);
 	var itemStyle = 'style="display: inline-block;float: left;color: #333333;text-decoration: none;background-color: #ffffff;display: inline-flex;width: 28%;height: 28%;text-align: center;margin: 8px;min-height: 64px;max-width: 64px;"';
 	var itemTemplate = '<a class="item {{itemType}}" href="{{url}}" target="_blank"><p style="margin: auto;display: flex;"><i class="{{icon}} fa-3x"></i>{{name}}</p></a>';
 	items.forEach(function (item, index) {
