@@ -93,11 +93,11 @@ $(document).ready(function () {
 	$('.item.game').click(function (e) {
 		var target = e.currentTarget;
 		var url = $(e).attr('url');
-		$.get(
+		$.get({
 			url, 
 			success: function (data) {
 				console.log(data);
 			}
-		);
+		});
 	});
 });
