@@ -94,7 +94,7 @@ $(document).ready(function () {
 	$('.item.game').click(function (e) {
 		e.preventDefault();
 		var target = e.currentTarget;
-		var url = $(e).attr('url');
+		var url = $(e).attr('href')+'.md';
 		console.log(target, url);
 		$.get({
 			url: url, 
