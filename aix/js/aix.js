@@ -1,7 +1,18 @@
 var init = function () {
-  var links,
+  var links = [
+      {
+        url: 'roaming',
+        text: 'roaming'
+      }
+    ],
       menu,
       main;
+  
+  document.getElementById('links').append('ul');
+  links.map(function (i) {
+    document.querySelector('#links ul').append('<li><a href="' + links[i].url + '">' + links[i].text + '</a><li>');
+  });    
+  
 };
 
 if ('function' === typeof document.addEventListener) {
