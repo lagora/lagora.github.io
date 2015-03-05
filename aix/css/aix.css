@@ -4,6 +4,9 @@ body {
 .debug {
   border: 1px solid red;
 }
+ul.links-list {
+  list-style: none;
+}
 li.link-item {
   display: flex;
   padding: 0;
