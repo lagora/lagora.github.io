@@ -10,7 +10,7 @@ var init = function () {
   console.log(links);
   document.getElementById('links').innerHTML = '<ul></ul>';
   links.map(function (i) {
-    console.log(links[i]);
+    console.log(links[i], i);
     //document.querySelector('#links ul').append('<li><a href="' + links[i].url + '">' + links[i].text + '</a><li>');
   });    
   
