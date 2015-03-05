@@ -41,5 +41,5 @@ if ('function' === typeof document.addEventListener) {
   documentReadyEvent = 'onload';
   bindPolyFill = window.attachEvent;
 }
-
+console.log('documentReadyEvent', documentReadyEvent);
 bindPolyFill(documentReadyEvent, init, false);
