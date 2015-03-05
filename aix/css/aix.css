@@ -9,12 +9,12 @@ ul.links-list {
   list-style: none;
 }
 li.link-item {
-  padding: 0;
   margin: 0 1%;
 }
 li.link-item a {
   text-decoration: none;
   font-family: Arial, Verdana;
+  padding: 4px;
   color: #fff;
   background-color: #000;
 }
