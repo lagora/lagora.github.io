@@ -9,7 +9,11 @@ var init = function () {
       main;
   console.log(links);
   document.getElementById('links').innerHTML = '<ul class="links-list"></ul>';
-  links.map(function (link) {
+  links
+  .filter(function (link) {
+    return !!link.url;
+  })
+  .map(function (link) {
     document.querySelector('#links ul').innerHTML += '<li class="link-item"><a href="' + link.url + '">' + link.text + '</a><li>';
   });    
   
