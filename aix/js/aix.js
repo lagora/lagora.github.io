@@ -19,7 +19,7 @@ var init = function () {
      return '<li class="link-item"><a href="#' + link.url + '">' + link.text + '</a><li>';
   });
   
-  if (9 < tmp.length) {
+  if (8 < tmp.length) {
     document.getElementById('links').innerHTML = '<ul class="links-list">' + tmp + '</ul>';
   }
 };
