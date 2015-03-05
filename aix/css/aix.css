@@ -1,1 +1,16 @@
+body {
+  margin: 0;
+}
 
+li.link-item {
+display: flex;
+padding: 0;
+margin: 0;
+}
+
+div#main {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  border: 1px solid red;
+}
