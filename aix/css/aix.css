@@ -1,7 +1,7 @@
 body {
   margin: 0;
 }
-debug {
+.debug {
   border: 1px solid red;
 }
 li.link-item {
