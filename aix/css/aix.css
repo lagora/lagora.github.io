@@ -22,6 +22,7 @@ li.link-item a {
   padding: 4px;
   color: #fff;
   background-color: #000;
+  border-radius: 4px;
 }
 li.link-item a:hover{
   background-color: #888;
