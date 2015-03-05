@@ -1,5 +1,5 @@
-$(document).ready(function () {
+(function () {
   var links,
       menu,
       main;
-});
+})();
