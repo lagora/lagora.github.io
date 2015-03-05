@@ -7,7 +7,7 @@ var init = function () {
     ],
       menu,
       main;
-  console.log(links);
+
   document.getElementById('links').innerHTML = '<ul class="links-list"></ul>';
   links
   .filter(function (link) {
