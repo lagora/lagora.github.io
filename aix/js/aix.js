@@ -9,9 +9,8 @@ var init = function () {
       main;
   console.log(links);
   document.getElementById('links').innerHTML = '<ul></ul>';
-  links.map(function (i) {
-    console.log(links[i], i);
-    //document.querySelector('#links ul').append('<li><a href="' + links[i].url + '">' + links[i].text + '</a><li>');
+  links.map(function (link) {
+    document.querySelector('#links ul').append('<li><a href="' + link.url + '">' + link.text + '</a><li>');
   });    
   
 };
