@@ -1,3 +1,5 @@
+var bindPolyFill;
+var documentReadyEvent;
 var init = function () {
   var links = [
       {
@@ -23,11 +25,21 @@ var init = function () {
 };
 
 if ('function' === typeof document.addEventListener) {
-  document.addEventListener('DOMContentLoaded', init, false);
+  //document.addEventListener('DOMContentLoaded', init, false);
+  documentReadyEvent = 'DOMContentLoaded';
+  bindPolyFill = document.addEventListener;
 } else if ('function' === typeof document.addEventListener) {
-  window.addEventListener('load', init, false);
+  //window.addEventListener('load', init, false);
+  documentReadyEvent = 'DOMContentLoaded';
+  bindPolyFill = window.addEventListener;
 } else if ('function' === typeof document.addEventListener) {
-  document.attachEvent("onreadystatechange", init);
+  //document.attachEvent("onreadystatechange", init);
+  documentReadyEvent = 'onreadystatechange';
+  bindPolyFill = document.attachEvent;
 } else if ('function' === typeof document.addEventListener) {
-  window.attachEvent("onload", init);
+  //window.attachEvent("onload", init);
+  documentReadyEvent = 'onload';
+  bindPolyFill = window.attachEvent;
 }
+
+bindPolyFill(documentReadyEvent, init, false);
