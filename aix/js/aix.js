@@ -10,7 +10,7 @@ var init = function () {
   console.log(links);
   document.getElementById('links').innerHTML = '<ul></ul>';
   links.map(function (link) {
-    document.querySelector('#links ul').append('<li><a href="' + link.url + '">' + link.text + '</a><li>');
+    document.querySelector('#links ul').innerHTML += '<li><a href="' + link.url + '">' + link.text + '</a><li>';
   });    
   
 };
