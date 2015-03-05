@@ -1,6 +1,10 @@
 var init = function () {
   var links = [
       {
+        url: 'move',
+        text: 'move'
+      },
+      {
         url: 'roaming',
         text: 'roaming'
       }
