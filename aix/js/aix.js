@@ -8,9 +8,9 @@ var init = function () {
       menu,
       main;
   console.log(links);
-  document.getElementById('links').innerHTML = '<ul></ul>';
+  document.getElementById('links').innerHTML = '<ul class="links-list"></ul>';
   links.map(function (link) {
-    document.querySelector('#links ul').innerHTML += '<li><a href="' + link.url + '">' + link.text + '</a><li>';
+    document.querySelector('#links ul').innerHTML += '<li class="link-item"><a href="' + link.url + '">' + link.text + '</a><li>';
   });    
   
 };
