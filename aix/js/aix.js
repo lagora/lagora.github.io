@@ -7,7 +7,7 @@ var init = function () {
     ],
       menu,
       main;
-  
+  console.log(links);
   document.getElementById('links').innerHTML = '<ul></ul>';
   links.map(function (i) {
     console.log(links[i]);
