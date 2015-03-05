@@ -7,6 +7,7 @@ body {
 }
 #links {
   background-color: #fff;
+  display: flex;
 }
 ul.links-list {
   display: flex;
