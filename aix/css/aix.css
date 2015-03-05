@@ -12,7 +12,9 @@ li.link-item {
   padding: 0;
   margin: 0 1%;
 }
-li.link-item a{
+li.link-item a {
+  text-decoration: none;
+  font-family: Arial, Verdana;
   color: #fff;
   background-color: #000;
 }
