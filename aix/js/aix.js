@@ -8,7 +8,7 @@ var init = function () {
       menu,
       main;
   
-  document.getElementById('links').append('ul');
+  document.getElementById('links').innerHTML = '<ul></ul>';
   links.map(function (i) {
     document.querySelector('#links ul').append('<li><a href="' + links[i].url + '">' + links[i].text + '</a><li>');
   });    
