@@ -1,8 +1,12 @@
 body {
   margin: 0;
+  background-color: #000;
 }
 .debug {
   border: 1px solid red;
+}
+#links {
+  background-color: #fff;
 }
 ul.links-list {
   display: flex;
