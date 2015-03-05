@@ -12,6 +12,18 @@ li.link-item {
   padding: 0;
   margin: 0 1%;
 }
+li.link-item a{
+  color: #fff;
+  background-color: #000;
+}
+li.link-item a:hover{
+  background-color: #888;
+  color: #000;
+}
+li.link-item a.active{
+  background-color: #fff;
+  color: #000;
+}
 
 div#main {
   width: 320px;
