@@ -1,6 +1,8 @@
 var bindPolyFill;
 var documentReadyEvent;
+var idCharRange = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 var env = {
+  agents: [],
   x: {
     min: 0,
     max: undefined
@@ -8,6 +10,20 @@ var env = {
   y: {
     min: 0,
     max: undefined
+  },
+  spawnAgent: function () {
+    var id, x, y;
+    do {
+      id += idRange[Math.floor(Math.rand() * 16)];
+    } while (id.toString.length < 8)
+    
+    var agent = {
+      id: id, 
+      x: Math.floor(Math.rand() * this.x.max),
+      y: Math.floor(Math.rand() * this.y.max)
+    };
+    
+    this.agents.push(this.update(agent));
   },
   adjust: function (key, value) {
     if (undefined !== env[key].max && value > env[key].max) {
@@ -18,6 +34,12 @@ var env = {
     return value;
   },
   update: function (agent) {
+    if (undefined === agent) {
+      this.agents = this.agents.map(function (agent) {
+        return env.update(agent);
+      });
+      return;
+    }
     var agentKeys = Object.keys(agent);
     agentKeys
     .filter(function (key) {
@@ -28,6 +50,7 @@ var env = {
       env.adjust(key, value);
       agent[key] = adjustedValue;
     });
+    return agent;
   }
 };
 var init = function () {
