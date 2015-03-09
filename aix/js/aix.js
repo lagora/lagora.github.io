@@ -1,5 +1,35 @@
 var bindPolyFill;
 var documentReadyEvent;
+var env = {
+  x: {
+    min: 0,
+    max: undefined
+  },
+  y: {
+    min: 0,
+    max: undefined
+  },
+  adjust: function (key, value) {
+    if (undefined !== env[key].max && value > env[key].max) {
+      value = env[key].max;
+    } else if (undefined !== env[key].max && value < env[key].min) {
+      value = env[key].min;
+    }
+    return value;
+  },
+  update: function (agent) {
+    var agentKeys = Object.keys(agent);
+    agentKeys
+    .filter(function (key) {
+      return undefined !== env[key];
+    })
+    .map(function () {
+      var value = agent[key];
+      env.adjust(key, value);
+      agent[key] = adjustedValue;
+    });
+  }
+};
 var init = function () {
   var links = [
       {
