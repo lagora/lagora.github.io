@@ -37,6 +37,7 @@ Object.keys(sonofapix.links).map(function (each_link) {
   
   var link_div = document.createElement('div');
   link_div.class = "col-xs-1";
+  console.log(link_icon, link_a, link_div);
   
   link_a.appendChild(link_icon);
   link_div.appendChild(link_a);
