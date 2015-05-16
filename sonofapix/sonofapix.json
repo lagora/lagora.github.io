@@ -1,0 +1,17 @@
+{
+  "links": {
+    "mail": {
+      "icon": "fa fa-envelope",
+      "href": "mailto:lagora@sonofapix.com"
+    },
+    "twitter": {
+      "icon": "fa fa-twitter",
+      "href": "http://www.twitter.com/sonofapix"
+    },
+    "tumblr": {
+      "icon": "fa fa-tumblr",
+      "href": "http://sonofapix.tumblr.com/sonofapix"
+    }
+  },
+  "projects": {}
+}
