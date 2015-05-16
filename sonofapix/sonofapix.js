@@ -18,10 +18,12 @@ var sonofapix = {
 };
 
 Object.keys(sonofapix.head).map(function (head_element) {
-  console.log('head_element', head_element);
   sonofapix.head[head_element].map(function (each_element) {
-    console.log('each_element', each_element);
-    //var element = document.createElement(head_element);
+    var element = document.createElement(head_element);
+    Object.keys(each_element).map(function (element_attribute) {
+      element[element_attribute] = each_element[element_attribute];
+    });
+    console.log('element', element);
       
   });
 });
