@@ -23,11 +23,23 @@ Object.keys(sonofapix.head).map(function (head_element) {
     Object.keys(each_element).map(function (element_attribute) {
       element[element_attribute] = each_element[element_attribute];
     });
-    // console.log('element', element);
     document.head.appendChild(element);
   });
 });
 
-$(document).ready(function () {
+Object.keys(sonofapix.links).map(function (each_link) {
+  var link_icon = document.createElement('i');
+  link_icon.class = sonofapix.links[each_link].icon;
   
+  var link_a = document.createElement('a');
+  link_a.href = sonofapix.links[each_link].href;
+  link_a.target = "_blank";
+  
+  var link_div = document.createElement('div');
+  link_div.class = "col-xs-1";
+  
+  link_a.appendChild(link_icon);
+  link_div.appendChild(link_a);
+  
+  document.getElementById('links').appendChild(link_div);
 });
