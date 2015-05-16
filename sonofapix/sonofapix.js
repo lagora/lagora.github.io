@@ -23,8 +23,8 @@ Object.keys(sonofapix.head).map(function (head_element) {
     Object.keys(each_element).map(function (element_attribute) {
       element[element_attribute] = each_element[element_attribute];
     });
-    console.log('element', element);
-      
+    // console.log('element', element);
+    document.head.appendChild(element);
   });
 });
 
